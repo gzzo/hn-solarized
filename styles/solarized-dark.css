@@ -40,12 +40,12 @@
 
 html:not([data-hn-solarized="off"]) {
   color-scheme: dark;
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base0) !important;
 }
 
 html:not([data-hn-solarized="off"]) body {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base0) !important;
 }
 
@@ -55,7 +55,7 @@ html:not([data-hn-solarized="off"]) ::selection {
   color: var(--sol-base2);
 }
 
-/* Main HN container table (base02 #073642) distinct from outer page body (base03 #002b36) */
+/* Main HN container table (base03 #002b36) distinct from outer page background (base02 #073642) */
 html:not([data-hn-solarized="off"]) #hnmain,
 html:not([data-hn-solarized="off"]) table[bgcolor="#f6f6ef"],
 html:not([data-hn-solarized="off"]) td[bgcolor="#f6f6ef"],
@@ -63,21 +63,21 @@ html:not([data-hn-solarized="off"]) tr[bgcolor="#f6f6ef"],
 html:not([data-hn-solarized="off"]) td[bgcolor="#ffffff"],
 html:not([data-hn-solarized="off"]) tr[bgcolor="#ffffff"],
 html:not([data-hn-solarized="off"]) table[bgcolor="#ffffff"] {
-  background-color: var(--sol-base02) !important;
+  background-color: var(--sol-base03) !important;
   color: var(--sol-base0) !important;
 }
 
 html:not([data-hn-solarized="off"]) #hnmain {
-  border-left: 1px solid rgba(88, 110, 117, 0.3);
-  border-right: 1px solid rgba(88, 110, 117, 0.3);
-  border-bottom: 1px solid rgba(88, 110, 117, 0.3);
+  border-left: 1px solid rgba(88, 110, 117, 0.35);
+  border-right: 1px solid rgba(88, 110, 117, 0.35);
+  border-bottom: 1px solid rgba(88, 110, 117, 0.35);
 }
 
 /* Highlighted rows/cells (e.g., focused comment td[bgcolor="#ffffaa"]) */
 html:not([data-hn-solarized="off"]) td[bgcolor="#ffffaa"],
 html:not([data-hn-solarized="off"]) tr[bgcolor="#ffffaa"],
 html:not([data-hn-solarized="off"]) table[bgcolor="#ffffaa"] {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   outline: 1px solid var(--sol-yellow) !important;
 }
 
@@ -85,7 +85,7 @@ html:not([data-hn-solarized="off"]) table[bgcolor="#ffffaa"] {
 html:not([data-hn-solarized="off"]) td[bgcolor="#ff6600"],
 html:not([data-hn-solarized="off"]) tr[bgcolor="#ff6600"],
 html:not([data-hn-solarized="off"]) table[bgcolor="#ff6600"] {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   border-bottom: 2px solid var(--sol-orange);
 }
 
@@ -333,7 +333,7 @@ html:not([data-hn-solarized="off"]) .cdd a:link {
 
 /* Code blocks and inline code */
 html:not([data-hn-solarized="off"]) pre {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base1) !important;
   border: 1px solid rgba(88, 110, 117, 0.4) !important;
   border-radius: 4px !important;
@@ -342,7 +342,7 @@ html:not([data-hn-solarized="off"]) pre {
 }
 
 html:not([data-hn-solarized="off"]) code {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base1) !important;
   border-radius: 3px !important;
   padding: 1px 4px !important;
@@ -415,7 +415,7 @@ html:not([data-hn-solarized="off"]) input[type="number"],
 html:not([data-hn-solarized="off"]) input:not([type]),
 html:not([data-hn-solarized="off"]) textarea,
 html:not([data-hn-solarized="off"]) select {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base1) !important;
   border: 1px solid var(--sol-base01) !important;
   border-radius: 4px !important;
@@ -439,7 +439,7 @@ html:not([data-hn-solarized="off"]) select:focus {
 html:not([data-hn-solarized="off"]) input[type="submit"],
 html:not([data-hn-solarized="off"]) input[type="button"],
 html:not([data-hn-solarized="off"]) button {
-  background-color: var(--sol-base03) !important;
+  background-color: var(--sol-base02) !important;
   color: var(--sol-base1) !important;
   border: 1px solid var(--sol-base01) !important;
   border-radius: 4px !important;

@@ -14,9 +14,9 @@ A Manifest V3 Google Chrome extension that styles [Hacker News](https://news.yco
 
 | Element | Solarized Token | Hex |
 | :--- | :--- | :--- |
-| Outer Page Background (`html`, `body`) | `base03` | `#002b36` |
-| Main HN Content Body (`#hnmain`) | `base02` | `#073642` |
-| Header Bar, Inputs & Code Blocks | `base03` | `#002b36` |
+| Outer Page Background (`html`, `body`) | `base02` | `#073642` |
+| Main HN Content Body (`#hnmain`) | `base03` | `#002b36` |
+| Header Bar, Inputs & Code Blocks | `base02` | `#073642` |
 | Story Titles (Unvisited) | `base1` / `blue` | `#93a1a1` / `#268bd2` |
 | Story Titles (Visited) & Subtext | `base01` | `#586e75` |
 | Comment Body Text | `base0` | `#839496` |
