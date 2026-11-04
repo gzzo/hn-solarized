@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HN Solarized Dark</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <span class="logo">Y</span>
+        <div>
+          <h1>HN Solarized Dark</h1>
+          <p class="subtitle">news.ycombinator.com</p>
+        </div>
+      </div>
+      <label class="switch" title="Toggle Solarized Dark theme">
+        <input type="checkbox" id="enabledToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="controls" id="controlsSection">
+      <div class="control-row">
+        <label for="headerStyle">Header Bar</label>
+        <select id="headerStyle">
+          <option value="dark">Base03 Dark (#002b36)</option>
+          <option value="orange">Solarized Orange (#cb4b16)</option>
+        </select>
+      </div>
+
+      <div class="control-row">
+        <label for="titleStyle">Story Titles</label>
+        <select id="titleStyle">
+          <option value="base1">Base1 Crisp (#93a1a1)</option>
+          <option value="blue">Solarized Blue (#268bd2)</option>
+        </select>
+      </div>
+    </section>
+
+    <footer class="palette-footer">
+      <span class="palette-label">Solarized Dark Palette</span>
+      <div class="swatches">
+        <span class="swatch" style="background:#002b36" title="base03 #002b36"></span>
+        <span class="swatch" style="background:#073642" title="base02 #073642"></span>
+        <span class="swatch" style="background:#586e75" title="base01 #586e75"></span>
+        <span class="swatch" style="background:#839496" title="base0 #839496"></span>
+        <span class="swatch" style="background:#93a1a1" title="base1 #93a1a1"></span>
+        <span class="swatch" style="background:#b58900" title="yellow #b58900"></span>
+        <span class="swatch" style="background:#cb4b16" title="orange #cb4b16"></span>
+        <span class="swatch" style="background:#268bd2" title="blue #268bd2"></span>
+        <span class="swatch" style="background:#2aa198" title="cyan #2aa198"></span>
+        <span class="swatch" style="background:#859900" title="green #859900"></span>
+      </div>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+

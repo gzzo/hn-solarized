@@ -1,0 +1,458 @@
+/*
+ * Hacker News Solarized Dark
+ * Official Solarized palette by Ethan Schoonover:
+ *   base03:  #002b36 (primary background)
+ *   base02:  #073642 (background highlights)
+ *   base01:  #586e75 (secondary content / comments / visited)
+ *   base00:  #657b83 (muted body text)
+ *   base0:   #839496 (primary body text)
+ *   base1:   #93a1a1 (emphasized text / titles)
+ *   base2:   #eee8d5 (light highlight)
+ *   base3:   #fdf6e3 (brightest highlight)
+ *   yellow:  #b58900
+ *   orange:  #cb4b16
+ *   red:     #dc322f
+ *   magenta: #d33682
+ *   violet:  #6c71c4
+ *   blue:    #268bd2
+ *   cyan:    #2aa198
+ *   green:   #859900
+ */
+
+:root {
+  --sol-base03:  #002b36;
+  --sol-base02:  #073642;
+  --sol-base01:  #586e75;
+  --sol-base00:  #657b83;
+  --sol-base0:   #839496;
+  --sol-base1:   #93a1a1;
+  --sol-base2:   #eee8d5;
+  --sol-base3:   #fdf6e3;
+  --sol-yellow:  #b58900;
+  --sol-orange:  #cb4b16;
+  --sol-red:     #dc322f;
+  --sol-magenta: #d33682;
+  --sol-violet:  #6c71c4;
+  --sol-blue:    #268bd2;
+  --sol-cyan:    #2aa198;
+  --sol-green:   #859900;
+}
+
+html:not([data-hn-solarized="off"]) {
+  color-scheme: dark;
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base0) !important;
+}
+
+html:not([data-hn-solarized="off"]) body {
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base0) !important;
+}
+
+/* Text selection */
+html:not([data-hn-solarized="off"]) ::selection {
+  background-color: var(--sol-base02);
+  color: var(--sol-base2);
+}
+
+/* Main HN container table (base02 #073642) distinct from outer page body (base03 #002b36) */
+html:not([data-hn-solarized="off"]) #hnmain,
+html:not([data-hn-solarized="off"]) table[bgcolor="#f6f6ef"],
+html:not([data-hn-solarized="off"]) td[bgcolor="#f6f6ef"],
+html:not([data-hn-solarized="off"]) tr[bgcolor="#f6f6ef"],
+html:not([data-hn-solarized="off"]) td[bgcolor="#ffffff"],
+html:not([data-hn-solarized="off"]) tr[bgcolor="#ffffff"],
+html:not([data-hn-solarized="off"]) table[bgcolor="#ffffff"] {
+  background-color: var(--sol-base02) !important;
+  color: var(--sol-base0) !important;
+}
+
+html:not([data-hn-solarized="off"]) #hnmain {
+  border-left: 1px solid rgba(88, 110, 117, 0.3);
+  border-right: 1px solid rgba(88, 110, 117, 0.3);
+  border-bottom: 1px solid rgba(88, 110, 117, 0.3);
+}
+
+/* Highlighted rows/cells (e.g., focused comment td[bgcolor="#ffffaa"]) */
+html:not([data-hn-solarized="off"]) td[bgcolor="#ffffaa"],
+html:not([data-hn-solarized="off"]) tr[bgcolor="#ffffaa"],
+html:not([data-hn-solarized="off"]) table[bgcolor="#ffffaa"] {
+  background-color: var(--sol-base03) !important;
+  outline: 1px solid var(--sol-yellow) !important;
+}
+
+/* Top header bar & footer orange divider bar */
+html:not([data-hn-solarized="off"]) td[bgcolor="#ff6600"],
+html:not([data-hn-solarized="off"]) tr[bgcolor="#ff6600"],
+html:not([data-hn-solarized="off"]) table[bgcolor="#ff6600"] {
+  background-color: var(--sol-base03) !important;
+  border-bottom: 2px solid var(--sol-orange);
+}
+
+/* Optional Solarized Orange header mode */
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) td[bgcolor="#ff6600"] {
+  background-color: var(--sol-orange) !important;
+  border-bottom: none;
+}
+
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .pagetop,
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .pagetop a,
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .pagetop a:visited,
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .hnname a,
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .hnname a:visited {
+  color: var(--sol-base3) !important;
+}
+
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .topsel a,
+html[data-hn-header="orange"]:not([data-hn-solarized="off"]) .topsel a:visited {
+  color: var(--sol-base03) !important;
+  font-weight: bold !important;
+}
+
+/* Top navigation bar text and links (default base02 header) */
+html:not([data-hn-solarized="off"]) .pagetop {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .pagetop a,
+html:not([data-hn-solarized="off"]) .pagetop a:visited {
+  color: var(--sol-base1) !important;
+  text-decoration: none;
+}
+
+html:not([data-hn-solarized="off"]) .pagetop a:hover {
+  color: var(--sol-orange) !important;
+}
+
+html:not([data-hn-solarized="off"]) .hnname a,
+html:not([data-hn-solarized="off"]) .hnname a:visited {
+  color: var(--sol-orange) !important;
+  font-weight: bold !important;
+}
+
+html:not([data-hn-solarized="off"]) .topsel a,
+html:not([data-hn-solarized="off"]) .topsel a:visited {
+  color: var(--sol-yellow) !important;
+  font-weight: bold !important;
+}
+
+/* Y Combinator 18x18 logo */
+html:not([data-hn-solarized="off"]) img[src*="y18"] {
+  border-color: var(--sol-orange) !important;
+  border-radius: 2px;
+}
+
+/* Default links across pages */
+html:not([data-hn-solarized="off"]) a:link {
+  color: var(--sol-blue);
+}
+
+html:not([data-hn-solarized="off"]) a:visited {
+  color: var(--sol-violet);
+}
+
+html:not([data-hn-solarized="off"]) a:hover {
+  color: var(--sol-cyan);
+}
+
+/* Story list items: rank, title, and domain */
+html:not([data-hn-solarized="off"]) .title {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .rank {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) .titleline > a:link {
+  color: var(--sol-base1) !important;
+}
+
+/* Optional Blue Story Titles mode */
+html[data-hn-titles="blue"]:not([data-hn-solarized="off"]) .titleline > a:link {
+  color: var(--sol-blue) !important;
+}
+
+html:not([data-hn-solarized="off"]) .titleline > a:visited {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) .titleline > a:hover {
+  color: var(--sol-orange) !important;
+}
+
+/* Domain name (example.com) */
+html:not([data-hn-solarized="off"]) .sitebit,
+html:not([data-hn-solarized="off"]) .sitebit a,
+html:not([data-hn-solarized="off"]) .sitebit a:visited,
+html:not([data-hn-solarized="off"]) .sitestr {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .sitebit a:hover,
+html:not([data-hn-solarized="off"]) .sitebit a:hover .sitestr {
+  color: var(--sol-cyan) !important;
+  text-decoration: underline !important;
+}
+
+/* Story subtext row (points, user, age, comments count) */
+html:not([data-hn-solarized="off"]) .subtext,
+html:not([data-hn-solarized="off"]) .subline {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) .subtext a,
+html:not([data-hn-solarized="off"]) .subtext a:visited,
+html:not([data-hn-solarized="off"]) .subline a,
+html:not([data-hn-solarized="off"]) .subline a:visited {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .subtext a:hover,
+html:not([data-hn-solarized="off"]) .subline a:hover {
+  color: var(--sol-cyan) !important;
+  text-decoration: underline !important;
+}
+
+html:not([data-hn-solarized="off"]) .score {
+  color: var(--sol-yellow) !important;
+}
+
+html:not([data-hn-solarized="off"]) a.hnuser,
+html:not([data-hn-solarized="off"]) a.hnuser:visited {
+  color: var(--sol-cyan) !important;
+}
+
+html:not([data-hn-solarized="off"]) a.hnuser:hover {
+  color: var(--sol-blue) !important;
+}
+
+/* Vote arrows */
+html:not([data-hn-solarized="off"]) .votearrow {
+  filter: brightness(0.95) sepia(40%) hue-rotate(150deg) saturate(150%);
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+html:not([data-hn-solarized="off"]) .votearrow:hover {
+  filter: sepia(100%) saturate(400%) hue-rotate(345deg) brightness(95%);
+  transform: scale(1.15);
+}
+
+/* Comments & comment tree */
+html:not([data-hn-solarized="off"]) .default,
+html:not([data-hn-solarized="off"]) .comment,
+html:not([data-hn-solarized="off"]) .commtext,
+html:not([data-hn-solarized="off"]) .c00 {
+  color: var(--sol-base0) !important;
+}
+
+html:not([data-hn-solarized="off"]) .commtext a:link,
+html:not([data-hn-solarized="off"]) .c00 a:link {
+  color: var(--sol-blue) !important;
+  text-decoration: underline;
+}
+
+html:not([data-hn-solarized="off"]) .commtext a:visited,
+html:not([data-hn-solarized="off"]) .c00 a:visited {
+  color: var(--sol-violet) !important;
+}
+
+html:not([data-hn-solarized="off"]) .commtext a:hover,
+html:not([data-hn-solarized="off"]) .c00 a:hover {
+  color: var(--sol-cyan) !important;
+}
+
+/* Comment header (author, timestamp, parent/prev/next, collapse toggle) */
+html:not([data-hn-solarized="off"]) .comhead,
+html:not([data-hn-solarized="off"]) .comhead a,
+html:not([data-hn-solarized="off"]) .comhead a:visited {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) .comhead a.hnuser,
+html:not([data-hn-solarized="off"]) .comhead a.hnuser:visited {
+  color: var(--sol-cyan) !important;
+}
+
+html:not([data-hn-solarized="off"]) .comhead a:hover {
+  color: var(--sol-blue) !important;
+}
+
+html:not([data-hn-solarized="off"]) a.togg,
+html:not([data-hn-solarized="off"]) a.togg:visited {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) a.togg:hover {
+  color: var(--sol-orange) !important;
+}
+
+/* Reply link */
+html:not([data-hn-solarized="off"]) .reply a,
+html:not([data-hn-solarized="off"]) .reply a:visited {
+  color: var(--sol-base00) !important;
+  text-decoration: underline;
+}
+
+html:not([data-hn-solarized="off"]) .reply a:hover {
+  color: var(--sol-orange) !important;
+}
+
+/* Downvoted / faded comments */
+html:not([data-hn-solarized="off"]) .c5a,
+html:not([data-hn-solarized="off"]) .c73 {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .c82,
+html:not([data-hn-solarized="off"]) .c88,
+html:not([data-hn-solarized="off"]) .c9c {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) .cae,
+html:not([data-hn-solarized="off"]) .cbe,
+html:not([data-hn-solarized="off"]) .cce,
+html:not([data-hn-solarized="off"]) .cdd {
+  color: var(--sol-base01) !important;
+  opacity: 0.65 !important;
+}
+
+html:not([data-hn-solarized="off"]) .c5a a:link,
+html:not([data-hn-solarized="off"]) .c73 a:link,
+html:not([data-hn-solarized="off"]) .c82 a:link,
+html:not([data-hn-solarized="off"]) .c88 a:link,
+html:not([data-hn-solarized="off"]) .c9c a:link,
+html:not([data-hn-solarized="off"]) .cae a:link,
+html:not([data-hn-solarized="off"]) .cbe a:link,
+html:not([data-hn-solarized="off"]) .cce a:link,
+html:not([data-hn-solarized="off"]) .cdd a:link {
+  color: var(--sol-blue) !important;
+  opacity: 0.75;
+}
+
+/* Code blocks and inline code */
+html:not([data-hn-solarized="off"]) pre {
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base1) !important;
+  border: 1px solid rgba(88, 110, 117, 0.4) !important;
+  border-radius: 4px !important;
+  padding: 8px 10px !important;
+  overflow-x: auto !important;
+}
+
+html:not([data-hn-solarized="off"]) code {
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base1) !important;
+  border-radius: 3px !important;
+  padding: 1px 4px !important;
+}
+
+html:not([data-hn-solarized="off"]) pre code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Legacy inline <font> tags used by HN */
+html:not([data-hn-solarized="off"]) font[color="#000000"] {
+  color: var(--sol-base0) !important;
+}
+
+html:not([data-hn-solarized="off"]) font[color="#828282"],
+html:not([data-hn-solarized="off"]) .admin,
+html:not([data-hn-solarized="off"]) .dead {
+  color: var(--sol-base01) !important;
+}
+
+html:not([data-hn-solarized="off"]) font[color="#ff6600"] {
+  color: var(--sol-orange) !important;
+}
+
+html:not([data-hn-solarized="off"]) font[color="#3c963c"],
+html:not([data-hn-solarized="off"]) .hnuser font[color="#3c963c"] {
+  color: var(--sol-green) !important;
+}
+
+html:not([data-hn-solarized="off"]) font[color="#afafaf"],
+html:not([data-hn-solarized="off"]) font[color="#cccccc"] {
+  color: var(--sol-base01) !important;
+}
+
+/* "More" pagination link */
+html:not([data-hn-solarized="off"]) a.morelink,
+html:not([data-hn-solarized="off"]) a.morelink:link {
+  color: var(--sol-orange) !important;
+  font-weight: 600 !important;
+}
+
+html:not([data-hn-solarized="off"]) a.morelink:visited {
+  color: var(--sol-yellow) !important;
+}
+
+html:not([data-hn-solarized="off"]) a.morelink:hover {
+  color: var(--sol-blue) !important;
+}
+
+/* Footer links & search box */
+html:not([data-hn-solarized="off"]) .yclinks,
+html:not([data-hn-solarized="off"]) .yclinks a,
+html:not([data-hn-solarized="off"]) .yclinks a:visited {
+  color: var(--sol-base00) !important;
+}
+
+html:not([data-hn-solarized="off"]) .yclinks a:hover {
+  color: var(--sol-cyan) !important;
+}
+
+/* Forms, inputs, textareas, selects, buttons */
+html:not([data-hn-solarized="off"]) input[type="text"],
+html:not([data-hn-solarized="off"]) input[type="password"],
+html:not([data-hn-solarized="off"]) input[type="url"],
+html:not([data-hn-solarized="off"]) input[type="search"],
+html:not([data-hn-solarized="off"]) input[type="email"],
+html:not([data-hn-solarized="off"]) input[type="number"],
+html:not([data-hn-solarized="off"]) input:not([type]),
+html:not([data-hn-solarized="off"]) textarea,
+html:not([data-hn-solarized="off"]) select {
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base1) !important;
+  border: 1px solid var(--sol-base01) !important;
+  border-radius: 4px !important;
+  padding: 4px 6px !important;
+}
+
+html:not([data-hn-solarized="off"]) input[type="text"]:focus,
+html:not([data-hn-solarized="off"]) input[type="password"]:focus,
+html:not([data-hn-solarized="off"]) input[type="url"]:focus,
+html:not([data-hn-solarized="off"]) input[type="search"]:focus,
+html:not([data-hn-solarized="off"]) input[type="email"]:focus,
+html:not([data-hn-solarized="off"]) input[type="number"]:focus,
+html:not([data-hn-solarized="off"]) input:not([type]):focus,
+html:not([data-hn-solarized="off"]) textarea:focus,
+html:not([data-hn-solarized="off"]) select:focus {
+  outline: none !important;
+  border-color: var(--sol-blue) !important;
+  box-shadow: 0 0 0 2px rgba(38, 139, 210, 0.25) !important;
+}
+
+html:not([data-hn-solarized="off"]) input[type="submit"],
+html:not([data-hn-solarized="off"]) input[type="button"],
+html:not([data-hn-solarized="off"]) button {
+  background-color: var(--sol-base03) !important;
+  color: var(--sol-base1) !important;
+  border: 1px solid var(--sol-base01) !important;
+  border-radius: 4px !important;
+  padding: 4px 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+html:not([data-hn-solarized="off"]) input[type="submit"]:hover,
+html:not([data-hn-solarized="off"]) input[type="button"]:hover,
+html:not([data-hn-solarized="off"]) button:hover {
+  background-color: var(--sol-orange) !important;
+  color: var(--sol-base3) !important;
+  border-color: var(--sol-orange) !important;
+}
+
